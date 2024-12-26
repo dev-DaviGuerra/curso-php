@@ -16,13 +16,13 @@ $Alunos = [
 var_dump($Alunos['João']['Idade']);
 
 $cores = ['azul', 'amarelo', 'verde'];
-array_push($cores, 'vermelho');
+$cores[] = 'vermelho';
 array_shift($cores);
 var_dump($cores);
 
-$preços = ['Lápis' => 3, 'Caneta' => 5, 'Borracha' => 4];
-$preços['Borracha'] = $precos['Borracha'] + 10;
-$preços['Lápis'] = $precos['Lápis'] - 1;
+$preços = ["Lápis" => 3, "Caneta" => 5, "Borracha" => 4];
+$preços["Borracha"] = $preços["Borracha"] + 10;
+$preços["Lápis"] = $preços["Lápis"] - 1;
 print_r($preços);
 
 
