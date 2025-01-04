@@ -1,44 +1,37 @@
 <?php
-// Operadores Lógicos
+//exercício 1
+$usuarioCorreto = 'admin';
+$senhaCorreta = '123456';
 
-//&& Operador lógico E
-// Verifica se ambas condições são verdadeiras
+$usuario = 'admin';
+$senha = '123456';
 
-$idade = 18;
-$temCarteira = false;
-
-if ($idade >= 18 && $temCarteira) {
-    echo 'Você pode dirigir no Brasil';
-} else {
-    echo 'Você NÃO pode dirigir no Brasil';
+if ($usuarioCorreto == $usuario && $senhaCorreta == $senha) {
+    echo 'Seja bem-vindo(a)';
+} elseif ($usuarioCorreto == $usuario && $senhaCorreta != $senha) {
+    echo 'Senha incorreta';
+} elseif ($usuarioCorreto != $usuario && $senhaCorreta == $senha) {
+    echo 'Nome de usuário não identificado';
 }
 
-//|| Operador lógico OU
-$idade = 18;
-$temCarteira = false;
-if ($idade>=18 || $temCarteira == true){
-    echo 'Você pode dirigir uma nave espacial';
-} else {
-    echo "Você não pode dirigir uma nave espacil";
-}
-// ! Operador lógico de negação
-$temCarteira = 'ppd';
+//Exercício 2
 
-// 0 == false
-// 1 == true
-//null = nulo, ou vazio
+$idade = 17;
+$acompanhadoResponsável = false;
 
-if ($temCarteira === false) {
-    echo "Você não pode dirigir";
-} 
-
-elseif($temCarteira === true) {
-    echo "Você pode dirigir";
-}
-elseif($temCarteira === "ppd"){
-    echo "Você pode dirigir com cuidado";
+if ($idade >= 18 || $acompanhadoResponsável == true) {
+    echo 'Pode entrar na festa';
+} else{
+    echo 'Não pode entrar na festa';
 }
 
-else {
-    echo "Não sei se você pode dirigir";
+
+//Exercício 3 
+$valorCompra = 200;
+$vip = true;
+
+if ($valorCompra > 200 || $vip == true){
+    echo 'Você tem um desconto de 20%';
+} elseif ($valorCompra >=150 && $valorCompra <= 200 ){
+    echo 'Você tem um desconto de 10%';
 }
